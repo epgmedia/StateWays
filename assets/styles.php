@@ -111,12 +111,12 @@ function auto_version_css($file) {
 add_action( 'wp_enqueue_scripts', function() {
 
     // Child Stylesheet
-    $fileName = auto_version_css( '/assets/albev.css' );
-    wp_register_style( 'BIG-Styles', CHILDURI . $fileName, array('theme-style') );
-    wp_enqueue_style( 'BIG-Styles' );
+    $fileName = auto_version_css( '/assets/stateways.css' );
+    wp_register_style( 'StateWays-Styles', CHILDURI . $fileName, array('theme-style') );
+    wp_enqueue_style( 'StateWays-Styles' );
 
     $adminFileName = '/assets/beverage-admin.css';
-    wp_enqueue_style( 'BIG-Admin', CHILDURI . $adminFileName );
+    wp_enqueue_style( 'StateWays-Admin', CHILDURI . $adminFileName );
 
     // Extra JS
     wp_enqueue_script(
@@ -142,6 +142,6 @@ add_action( 'admin_head', function() {
 
     // Child Stylesheet
     $adminFileName = auto_version_css( '/assets/beverage-admin.css' );
-    wp_enqueue_style( 'BIG-Admin', CHILDURI . $adminFileName );
+    wp_enqueue_style( 'StateWays-Admin', CHILDURI . $adminFileName );
 
 });
